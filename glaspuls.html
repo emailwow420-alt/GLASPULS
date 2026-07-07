@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
 
@@ -971,6 +971,16 @@ position:absolute;
 inset:0;
 }
 
+.ba-photo{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+z-index:0;
+}
+
 .ba-slider .ba-day{
 background:linear-gradient(160deg,#dfe3e6,#c7ccd1);
 }
@@ -985,10 +995,13 @@ position:absolute;
 inset:0;
 background-image:repeating-linear-gradient(90deg,transparent,transparent 9px,rgba(79,216,255,.4) 10px);
 opacity:.5;
+z-index:1;
+pointer-events:none;
 }
 
 .ba-slider .ba-night .ba-brand{
 position:absolute;
+z-index:2;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
@@ -1001,6 +1014,7 @@ white-space:nowrap;
 
 .ba-slider .ba-day-label{
 position:absolute;
+z-index:2;
 inset:0;
 display:flex;
 align-items:center;
@@ -1395,6 +1409,39 @@ right:20px;
 }
 }
 
+
+/* ============ Mobile Feinschliff ============ */
+@media(max-width:700px){
+  nav{padding:14px 0;}
+  .logo{font-size:22px;}
+  .nav-cta-desktop{display:none;}
+  .hero{min-height:auto;padding:110px 0 70px;}
+  .hero h1{font-size:clamp(42px,13vw,56px);}
+  .hero p{font-size:17px;line-height:1.65;margin-bottom:30px;}
+  .eyebrow{letter-spacing:.18em;font-size:11px;}
+  .hero-image{margin-top:24px;}
+  .mockup-frame{height:360px;border-radius:18px;}
+  .case-visual{min-height:320px;}
+  .ba-tag{top:14px;padding:7px 12px;font-size:12px;}
+  .ba-tag.day{left:14px;}
+  .ba-tag.night{right:14px;}
+  .ba-handle-grip{width:42px;height:42px;}
+  .roi-box{padding:32px 22px;border-radius:18px;gap:34px;}
+  .roi-result h2{font-size:40px;}
+  .specs-table,.compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .contact-form input,.contact-form textarea{font-size:16px;}
+  .whatsapp{width:54px;height:54px;font-size:24px;bottom:18px;right:18px;}
+  .float-cta{bottom:86px;right:18px;padding:12px;}
+}
+
+@media(max-width:380px){
+  .wrap{width:min(1180px,90%);}
+  .hero h1{font-size:40px;}
+  .btn{padding:14px 22px;font-size:15px;}
+  .mockup-frame{height:320px;}
+  .case-visual{min-height:290px;}
+  .case-stats{display:grid;grid-template-columns:1fr 1fr;}
+}
 </style>
 
 </head>
@@ -1452,7 +1499,7 @@ right:20px;
 </div>
 </div>
 <div class="hero-image">
-<img src="images/showcase1.jpg" alt="Transparente LED Folie">
+<img src="images/hero-transparente-led-folie.jpg" alt="Transparente LED Folie">
 <div class="glow"></div>
 </div>
 </div>
@@ -1476,14 +1523,14 @@ right:20px;
 </div>
 <div class="gallery">
 <div class="card">
-<img src="images/showcase1.jpg" alt="LED Glasfassade">
+<img src="images/galerie-led-glasfassade.jpg" alt="LED Glasfassade">
 <div class="overlay">
 <h3>Großflächige Glasfassaden</h3>
 <p>Ideal für Einkaufszentren, Bürogebäude und Eingangsbereiche.</p>
 </div>
 </div>
 <div class="card">
-<img src="images/showcase2.jpg" alt="LED Folie">
+<img src="images/galerie-led-folie.jpg" alt="LED Folie">
 <div class="overlay">
 <h3>Flexible LED-Folie</h3>
 <p>Direkt auf Glas montiert. Keine massive LED-Wand nötig.</p>
@@ -1503,10 +1550,12 @@ right:20px;
 <div class="mockup-frame">
 <div class="ba-slider" id="mockupSlider" style="height:100%;">
 <div class="ba-layer ba-day">
-<div class="ba-day-label">Fenster · AUS</div>
+<img class="ba-photo" src="images/schieber-aus.jpg" alt="Fenster ohne aktive LED-Folie">
+
 </div>
 <div class="ba-layer ba-night">
-<div class="ba-brand">IHRE WERBUNG HIER</div>
+<img class="ba-photo" src="images/schieber-an.jpg" alt="Fenster mit aktiver LED-Folie">
+
 </div>
 <div class="ba-tag day">AUS</div>
 <div class="ba-tag night">AN</div>
@@ -1673,10 +1722,12 @@ right:20px;
 <div class="case-visual">
 <div class="ba-slider" id="caseSlider">
 <div class="ba-layer ba-day">
-<div class="ba-day-label">Schaufenster · Tag</div>
+<img class="ba-photo" src="images/referenz-tag.jpg" alt="Referenzinstallation bei Tag">
+
 </div>
 <div class="ba-layer ba-night">
-<div class="ba-brand">IHRE MARKE.</div>
+<img class="ba-photo" src="images/referenz-nacht.jpg" alt="Referenzinstallation bei Nacht">
+
 </div>
 <div class="ba-tag day">TAG</div>
 <div class="ba-tag night">NACHT</div>
@@ -1809,8 +1860,8 @@ right:20px;
 <a class="whatsapp" href="https://wa.me/4367764864005" target="_blank">💬</a>
 <a class="float-cta" id="floatCta" href="#kontakt">📅 <span>Kostenlose Beratung</span></a>
 
-<img class="parallax" src="images/showcase1.jpg" style="top:20%;left:5%;">
-<img class="parallax" src="images/showcase2.jpg" style="bottom:15%;right:5%;">
+<img class="parallax" src="images/parallax-links.jpg" style="top:20%;left:5%;">
+<img class="parallax" src="images/parallax-rechts.jpg" style="bottom:15%;right:5%;">
 
 <footer>
 <div class="wrap footer-grid">
@@ -2016,3 +2067,8 @@ window.addEventListener("scroll",()=>{
 
 </body>
 </html>
+
+
+
+
+
