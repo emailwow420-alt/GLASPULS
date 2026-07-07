@@ -1,0 +1,2074 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>GLASPULS | Transparente LED-Folie für Schaufenster & Glasfassaden</title>
+
+<meta name="description" content="GLASPULS bringt transparente LED-Folien nach Österreich. Verwandeln Sie Glasflächen in digitale Werbeflächen ohne die Sicht zu verlieren.">
+
+<meta property="og:title" content="GLASPULS">
+<meta property="og:description" content="Transparente LED-Werbung für Glasflächen.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0f1216;
+--card:#181d22;
+--line:#2d353d;
+--text:#eef2f4;
+--muted:#9ba5ae;
+--cyan:#4fd8ff;
+--cyan2:#6de7ff;
+--amber:#ffb020;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.wrap{
+width:min(1180px,92%);
+margin:auto;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+padding:22px 0;
+z-index:999;
+background:rgba(15,18,22,.75);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:"Space Grotesk";
+font-size:26px;
+font-weight:700;
+letter-spacing:.03em;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo::before{
+content:"";
+width:10px;
+height:10px;
+border-radius:50%;
+background:var(--cyan);
+box-shadow:0 0 15px var(--cyan);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(.6);
+opacity:.3;
+}
+}
+
+.menu{
+display:flex;
+gap:40px;
+color:var(--muted);
+}
+
+.menu a:hover{
+color:white;
+}
+
+.btn{
+padding:15px 28px;
+background:linear-gradient(135deg,var(--cyan),#73f2ff);
+border-radius:100px;
+font-weight:600;
+color:#081014;
+transition:.3s;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 35px rgba(79,216,255,.35);
+}
+
+.hero{
+min-height:100vh;
+min-height:100dvh;
+padding-top:100px;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:-20%;
+background:
+radial-gradient(circle at 20% 20%,rgba(79,216,255,.18),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(79,216,255,.15),transparent 25%),
+radial-gradient(circle at 50% 100%,rgba(79,216,255,.1),transparent 40%);
+animation:float 12s linear infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-30px) scale(1.05);
+}
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
+position:relative;
+z-index:2;
+}
+
+.eyebrow{
+color:var(--cyan);
+letter-spacing:.25em;
+font-size:12px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-family:"Space Grotesk";
+font-size:74px;
+line-height:1;
+margin-bottom:30px;
+}
+
+.hero h1 span{
+color:var(--cyan);
+text-shadow:0 0 35px rgba(79,216,255,.45);
+}
+
+.hero p{
+font-size:20px;
+color:var(--muted);
+max-width:620px;
+line-height:1.8;
+margin-bottom:45px;
+}
+
+.roi-teaser{
+display:inline-block;
+margin-left:20px;
+color:var(--cyan2);
+font-size:15px;
+font-weight:500;
+border-bottom:1px solid rgba(79,216,255,.4);
+padding-bottom:2px;
+transition:.3s;
+}
+
+.roi-teaser:hover{
+border-color:var(--cyan2);
+}
+
+@media(max-width:980px){
+.roi-teaser{
+display:block;
+margin:18px 0 0;
+}
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:100%;
+border-radius:22px;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 50px 120px rgba(0,0,0,.45);
+}
+
+.glow{
+position:absolute;
+inset:0;
+border-radius:22px;
+box-shadow:0 0 80px rgba(79,216,255,.25);
+pointer-events:none;
+}
+
+.stats{
+display:flex;
+gap:50px;
+margin-top:60px;
+}
+
+@media(max-width:480px){
+.stats{
+flex-wrap:wrap;
+gap:24px 32px;
+}
+.stat h2{
+font-size:28px;
+}
+}
+
+.trust-bar{
+padding:30px 0;
+border-bottom:1px solid rgba(255,255,255,.06);
+background:rgba(255,255,255,.02);
+}
+
+.trust-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.trust-item{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--muted);
+font-size:14px;
+font-weight:500;
+white-space:nowrap;
+}
+
+.trust-icon{
+font-size:18px;
+}
+
+@media(max-width:700px){
+.trust-grid{
+gap:20px 28px;
+}
+.trust-item{
+font-size:13px;
+}
+}
+
+.stat h2{
+font-family:"Space Grotesk";
+font-size:36px;
+color:var(--cyan);
+}
+
+.stat span{
+color:var(--muted);
+}
+
+@media(max-width:980px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:52px;
+}
+.hero{
+padding-bottom:110px;
+}
+.menu{
+display:none;
+}
+.nav-cta-desktop{
+display:none;
+}
+}
+
+/* ============ Hamburger / Mobile Menu ============ */
+
+.hamburger{
+flex-direction:column;
+justify-content:center;
+gap:5px;
+width:36px;
+height:36px;
+background:none;
+border:none;
+cursor:pointer;
+padding:0;
+display:none;
+}
+
+@media(max-width:980px){
+.hamburger{
+display:flex;
+}
+}
+
+.hamburger span{
+display:block;
+width:100%;
+height:2px;
+background:var(--text);
+transition:.3s;
+}
+
+.hamburger.open span:nth-child(1){
+transform:translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.open span:nth-child(3){
+transform:translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu{
+display:flex;
+flex-direction:column;
+gap:0;
+max-height:0;
+overflow:hidden;
+transition:max-height .35s ease;
+background:rgba(15,18,22,.98);
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.mobile-menu.open{
+max-height:400px;
+}
+
+.mobile-menu a{
+padding:20px 24px;
+color:var(--muted);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.mobile-menu a.btn{
+margin:16px 24px;
+text-align:center;
+color:#081014;
+border-bottom:none;
+}
+
+/* ============ Zusätzliches CSS ============ */
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title span{
+color:var(--cyan);
+letter-spacing:.25em;
+font-size:12px;
+}
+
+.section-title h2{
+font-size:48px;
+font-family:"Space Grotesk";
+margin:20px 0;
+}
+
+.section-title p{
+color:var(--muted);
+max-width:700px;
+margin:auto;
+}
+
+.showcase{
+padding:140px 0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+}
+
+.card{
+position:relative;
+overflow:hidden;
+border-radius:22px;
+background:#111;
+}
+
+.card img{
+width:100%;
+display:block;
+transition:.6s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+.overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:35px;
+background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+
+.features{
+padding:140px 0;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.feature{
+background:var(--card);
+padding:40px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
+transition:.35s;
+}
+
+.feature:hover{
+transform:translateY(-10px);
+border-color:var(--cyan);
+box-shadow:0 0 50px rgba(79,216,255,.15);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:25px;
+}
+
+.feature h3{
+margin-bottom:15px;
+font-size:24px;
+font-family:"Space Grotesk";
+}
+
+.feature p{
+color:var(--muted);
+line-height:1.8;
+}
+
+@media(max-width:900px){
+.gallery,
+.compare,
+.feature-grid{
+grid-template-columns:1fr;
+}
+}
+
+.faq{
+padding:120px 0;
+}
+
+.faq-item{
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.faq-question{
+width:100%;
+padding:30px;
+font-size:22px;
+background:none;
+color:white;
+text-align:left;
+border:none;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding:0 30px 30px;
+color:var(--muted);
+line-height:1.8;
+}
+
+.contact{
+padding:150px 0;
+}
+
+.contact-form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:18px;
+background:#14181d;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+border-radius:12px;
+font-size:16px;
+}
+
+.consent{
+display:flex;
+align-items:flex-start;
+gap:12px;
+font-size:14px;
+color:var(--muted);
+line-height:1.6;
+cursor:pointer;
+}
+
+.consent input[type="checkbox"]{
+width:18px;
+height:18px;
+flex-shrink:0;
+margin-top:2px;
+accent-color:var(--cyan);
+}
+
+.consent a{
+color:var(--cyan);
+text-decoration:underline;
+}
+
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#25D366;
+font-size:34px;
+text-decoration:none;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+z-index:999;
+}
+
+footer{
+padding:80px 0 30px;
+background:#0a0d11;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+}
+
+@media(max-width:700px){
+.footer-grid{
+grid-template-columns:1fr;
+gap:36px;
+}
+}
+
+.footer-grid a{
+display:block;
+margin:10px 0;
+color:var(--muted);
+}
+
+.copyright{
+margin-top:60px;
+text-align:center;
+color:#777;
+}
+
+.copyright a{
+color:#777;
+text-decoration:underline;
+}
+
+.copyright a:hover{
+color:var(--cyan);
+}
+
+.clients{
+padding:140px 0;
+}
+
+.logo-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.logo-card{
+padding:45px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+background:var(--card);
+border-radius:18px;
+font-weight:700;
+letter-spacing:.08em;
+color:#bbb;
+transition:.35s;
+min-width:0;
+overflow-wrap:break-word;
+}
+
+@media(max-width:600px){
+.logo-card{
+padding:22px 12px;
+font-size:13px;
+letter-spacing:.03em;
+}
+}
+
+.logo-card:hover{
+transform:translateY(-8px);
+border-color:var(--cyan);
+color:white;
+}
+
+.timeline{
+padding:140px 0;
+}
+
+.cta-banner{
+padding:180px 0;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.cta-banner::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(79,216,255,.18),
+transparent);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+animation:rotateGlow 16s linear infinite;
+}
+
+@keyframes rotateGlow{
+from{
+transform:translate(-50%,-50%) rotate(0deg);
+}
+to{
+transform:translate(-50%,-50%) rotate(360deg);
+}
+}
+
+.cta-banner h2{
+position:relative;
+font-size:62px;
+font-family:"Space Grotesk";
+margin-bottom:25px;
+}
+
+.cta-banner p{
+position:relative;
+color:var(--muted);
+margin-bottom:45px;
+font-size:20px;
+}
+
+.cta-banner .btn{
+position:relative;
+}
+
+@media(max-width:900px){
+.logo-grid{
+grid-template-columns:1fr 1fr;
+}
+.cta-banner h2{
+font-size:42px;
+}
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+inset:0;
+background:#0b0e11;
+z-index:99999;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:1s;
+}
+
+.loader-logo{
+font-family:"Space Grotesk";
+font-size:50px;
+letter-spacing:.12em;
+margin-bottom:35px;
+}
+
+.loader-line{
+width:300px;
+height:5px;
+background:#222;
+overflow:hidden;
+border-radius:100px;
+}
+
+.loader-fill{
+height:100%;
+background:var(--cyan);
+animation:loading 2s forwards;
+}
+
+@keyframes loading{
+from{
+width:0;
+}
+to{
+width:100%;
+}
+}
+
+/* Scrollbar */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:var(--cyan);
+width:0;
+z-index:999999;
+}
+
+/* Testimonials */
+
+.testimonials{
+padding:150px 0;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+
+.testimonial{
+padding:40px;
+background:var(--card);
+border-radius:18px;
+font-size:22px;
+transition:.4s;
+}
+
+.testimonial:hover{
+transform:translateY(-8px);
+box-shadow:0 0 60px rgba(79,216,255,.15);
+}
+
+.testimonial p{
+margin:25px 0;
+font-size:17px;
+color:var(--muted);
+line-height:1.7;
+}
+
+.testimonial h4{
+color:var(--cyan);
+}
+
+.counter{
+color:var(--cyan);
+}
+
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:.35;
+}
+
+.parallax{
+transition:.25s;
+will-change:transform;
+position:fixed;
+opacity:0;
+pointer-events:none;
+z-index:-2;
+width:200px;
+border-radius:16px;
+}
+
+/* ============ Case Study / Social Proof ============ */
+
+.case-study{
+padding:150px 0;
+}
+
+.case-card{
+background:var(--card);
+border:1px solid rgba(255,255,255,.08);
+border-radius:26px;
+overflow:hidden;
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.case-visual{
+position:relative;
+min-height:420px;
+overflow:hidden;
+}
+
+.case-visual .ba-slider{
+width:100%;
+height:100%;
+}
+
+.case-body{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.case-meta{
+display:flex;
+align-items:center;
+gap:16px;
+margin-bottom:28px;
+}
+
+.case-logo{
+width:56px;
+height:56px;
+border-radius:12px;
+background:linear-gradient(135deg,var(--cyan),#76f0ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+color:#081014;
+font-family:"Space Grotesk";
+font-size:20px;
+flex-shrink:0;
+}
+
+.case-meta-text h4{
+font-family:"Space Grotesk";
+font-size:20px;
+}
+
+.case-meta-text span{
+color:var(--muted);
+font-size:14px;
+}
+
+.case-stats{
+display:flex;
+gap:35px;
+margin-bottom:30px;
+}
+
+.case-stat h3{
+font-family:"Space Grotesk";
+color:var(--cyan);
+font-size:28px;
+}
+
+.case-stat span{
+color:var(--muted);
+font-size:13px;
+}
+
+.case-quote{
+font-size:22px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.case-author{
+color:var(--muted);
+font-size:15px;
+}
+
+.case-note{
+margin-top:40px;
+font-size:13px;
+color:#6b747c;
+border-top:1px solid rgba(255,255,255,.08);
+padding-top:20px;
+}
+
+@media(max-width:900px){
+.case-card{
+grid-template-columns:1fr;
+}
+.case-body{
+padding:40px;
+}
+}
+
+@media(max-width:480px){
+.case-body{
+padding:28px 22px;
+}
+.case-stats{
+gap:18px;
+flex-wrap:wrap;
+}
+.case-quote{
+font-size:18px;
+}
+}
+
+/* ============ Interactive Slider (Day/Night, Off/On) ============ */
+
+.ba-slider{
+position:relative;
+overflow:hidden;
+cursor:ew-resize;
+user-select:none;
+touch-action:none;
+}
+
+.ba-slider .ba-layer{
+position:absolute;
+inset:0;
+}
+
+.ba-photo{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+z-index:0;
+}
+
+.ba-slider .ba-day{
+background:linear-gradient(160deg,#dfe3e6,#c7ccd1);
+}
+
+.ba-slider .ba-night{
+background:radial-gradient(circle at 30% 40%,#132029,#060a0d 70%);
+}
+
+.ba-slider .ba-night::before{
+content:"";
+position:absolute;
+inset:0;
+background-image:repeating-linear-gradient(90deg,transparent,transparent 9px,rgba(79,216,255,.4) 10px);
+opacity:.5;
+z-index:1;
+pointer-events:none;
+}
+
+.ba-slider .ba-night .ba-brand{
+position:absolute;
+z-index:2;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-family:"Space Grotesk";
+font-size:clamp(28px,4vw,52px);
+color:var(--cyan);
+text-shadow:0 0 30px var(--cyan);
+white-space:nowrap;
+}
+
+.ba-slider .ba-day-label{
+position:absolute;
+z-index:2;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#333;
+font-family:"Space Grotesk";
+font-size:clamp(20px,3vw,34px);
+}
+
+.ba-night{
+clip-path:inset(0 0 0 50%);
+}
+
+.ba-handle{
+position:absolute;
+top:0;
+bottom:0;
+left:50%;
+width:0;
+z-index:5;
+}
+
+.ba-handle-bar{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+width:3px;
+background:var(--cyan);
+box-shadow:0 0 20px var(--cyan);
+transform:translateX(-50%);
+}
+
+.ba-handle-grip{
+position:absolute;
+top:50%;
+left:0;
+transform:translate(-50%,-50%);
+width:50px;
+height:50px;
+border-radius:50%;
+background:var(--cyan);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#081014;
+font-weight:700;
+box-shadow:0 0 30px rgba(79,216,255,.5);
+}
+
+.ba-tag{
+position:absolute;
+top:20px;
+padding:8px 16px;
+border-radius:30px;
+font-weight:600;
+font-size:13px;
+z-index:4;
+}
+
+.ba-tag.day{
+left:20px;
+background:white;
+color:#111;
+}
+
+.ba-tag.night{
+right:20px;
+background:#0a0d11;
+color:var(--cyan);
+border:1px solid var(--cyan);
+}
+
+.mockup-section{
+padding:150px 0;
+}
+
+.mockup-frame{
+max-width:900px;
+margin:auto;
+height:520px;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 50px 120px rgba(0,0,0,.5);
+}
+
+.mockup-hint{
+text-align:center;
+color:var(--muted);
+margin-top:25px;
+font-size:14px;
+}
+
+/* ============ Process / Ablauf with icons + connectors ============ */
+
+.process-flow{
+display:flex;
+flex-direction:column;
+gap:0;
+max-width:640px;
+margin:auto;
+}
+
+.process-node{
+display:flex;
+align-items:center;
+gap:28px;
+padding:26px 30px;
+background:var(--card);
+border:1px solid rgba(255,255,255,.06);
+border-radius:18px;
+transition:.3s;
+}
+
+.process-node:hover{
+border-color:var(--cyan);
+box-shadow:0 0 40px rgba(79,216,255,.12);
+}
+
+.process-icon{
+width:64px;
+height:64px;
+flex-shrink:0;
+border-radius:16px;
+background:linear-gradient(135deg,var(--cyan),#76f0ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+}
+
+.process-text h3{
+font-family:"Space Grotesk";
+font-size:20px;
+margin-bottom:6px;
+}
+
+.process-text p{
+color:var(--muted);
+font-size:15px;
+line-height:1.6;
+}
+
+.process-connector{
+width:2px;
+height:36px;
+margin-left:60px;
+background:linear-gradient(var(--cyan),transparent);
+}
+
+/* ============ ROI Calculator ============ */
+
+.roi-section{
+padding:120px 0;
+}
+
+.roi-featured .roi-box{
+border:1px solid rgba(79,216,255,.35);
+box-shadow:0 0 60px rgba(79,216,255,.15);
+position:relative;
+}
+
+.roi-badge{
+display:inline-block;
+color:var(--amber);
+letter-spacing:.15em;
+font-size:12px;
+text-transform:uppercase;
+margin-bottom:20px;
+background:rgba(255,176,32,.1);
+border:1px solid rgba(255,176,32,.3);
+padding:8px 18px;
+border-radius:100px;
+}
+
+.roi-result .btn{
+margin-top:24px;
+}
+
+.roi-box{
+max-width:900px;
+margin:auto;
+background:var(--card);
+border-radius:24px;
+padding:60px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.roi-inputs label{
+display:block;
+color:var(--muted);
+font-size:14px;
+margin-bottom:8px;
+margin-top:24px;
+}
+
+.roi-inputs label:first-child{
+margin-top:0;
+}
+
+.roi-inputs input[type="range"]{
+width:100%;
+}
+
+.roi-inputs .roi-value{
+color:var(--cyan);
+font-weight:600;
+}
+
+.roi-result{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+border-left:1px solid rgba(255,255,255,.08);
+padding-left:60px;
+}
+
+.roi-result span{
+color:var(--muted);
+font-size:14px;
+letter-spacing:.1em;
+text-transform:uppercase;
+}
+
+.roi-result h2{
+font-family:"Space Grotesk";
+font-size:52px;
+color:var(--cyan);
+margin:15px 0;
+}
+
+.roi-result p{
+color:var(--muted);
+font-size:13px;
+max-width:280px;
+}
+
+@media(max-width:900px){
+.roi-box{
+grid-template-columns:1fr;
+}
+.roi-result{
+border-left:none;
+border-top:1px solid rgba(255,255,255,.08);
+padding-left:0;
+padding-top:40px;
+}
+}
+
+/* ============ Technical Specifications ============ */
+
+.specs-section{
+padding:140px 0;
+}
+
+.specs-table{
+max-width:900px;
+margin:auto;
+border-collapse:collapse;
+width:100%;
+}
+
+.specs-table tr{
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.specs-table td{
+padding:22px 20px;
+}
+
+.specs-table td:first-child{
+color:var(--muted);
+width:40%;
+}
+
+.specs-table td:last-child{
+font-weight:600;
+font-family:"Space Grotesk";
+}
+
+/* ============ Comparison Table ============ */
+
+.compare-section{
+padding:140px 0;
+}
+
+.compare-table{
+max-width:900px;
+margin:auto;
+border-collapse:collapse;
+width:100%;
+background:var(--card);
+border-radius:18px;
+overflow:hidden;
+}
+
+.compare-table th,
+.compare-table td{
+padding:22px 20px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.compare-table th{
+font-family:"Space Grotesk";
+font-size:15px;
+color:var(--muted);
+font-weight:500;
+}
+
+.compare-table td:first-child,
+.compare-table th:first-child{
+text-align:left;
+color:var(--text);
+}
+
+.compare-table .col-highlight{
+background:rgba(79,216,255,.08);
+color:var(--cyan);
+font-weight:700;
+}
+
+.compare-table tr:last-child td{
+border-bottom:none;
+}
+
+@media(max-width:700px){
+.specs-table td,
+.compare-table th,
+.compare-table td{
+padding:14px 6px;
+font-size:12.5px;
+word-break:break-word;
+}
+.compare-table{
+table-layout:fixed;
+}
+.compare-table th:first-child,
+.compare-table td:first-child{
+width:34%;
+}
+}
+
+/* ============ Floating consultation CTA ============ */
+
+.float-cta{
+position:fixed;
+bottom:30px;
+right:115px;
+padding:16px 24px;
+background:var(--cyan);
+color:#081014;
+border-radius:100px;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+z-index:999;
+opacity:0;
+transform:translateY(20px);
+pointer-events:none;
+transition:.35s;
+}
+
+.float-cta.show{
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
+}
+
+@media(max-width:700px){
+.float-cta span{
+display:none;
+}
+.float-cta{
+right:20px;
+bottom:112px;
+padding:14px;
+}
+.whatsapp{
+width:60px;
+height:60px;
+font-size:28px;
+bottom:24px;
+right:20px;
+}
+}
+
+
+/* ============ Mobile Feinschliff ============ */
+@media(max-width:700px){
+  nav{padding:14px 0;}
+  .logo{font-size:22px;}
+  .nav-cta-desktop{display:none;}
+  .hero{min-height:auto;padding:110px 0 70px;}
+  .hero h1{font-size:clamp(42px,13vw,56px);}
+  .hero p{font-size:17px;line-height:1.65;margin-bottom:30px;}
+  .eyebrow{letter-spacing:.18em;font-size:11px;}
+  .hero-image{margin-top:24px;}
+  .mockup-frame{height:360px;border-radius:18px;}
+  .case-visual{min-height:320px;}
+  .ba-tag{top:14px;padding:7px 12px;font-size:12px;}
+  .ba-tag.day{left:14px;}
+  .ba-tag.night{right:14px;}
+  .ba-handle-grip{width:42px;height:42px;}
+  .roi-box{padding:32px 22px;border-radius:18px;gap:34px;}
+  .roi-result h2{font-size:40px;}
+  .specs-table,.compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .contact-form input,.contact-form textarea{font-size:16px;}
+  .whatsapp{width:54px;height:54px;font-size:24px;bottom:18px;right:18px;}
+  .float-cta{bottom:86px;right:18px;padding:12px;}
+}
+
+@media(max-width:380px){
+  .wrap{width:min(1180px,90%);}
+  .hero h1{font-size:40px;}
+  .btn{padding:14px 22px;font-size:15px;}
+  .mockup-frame{height:320px;}
+  .case-visual{min-height:290px;}
+  .case-stats{display:grid;grid-template-columns:1fr 1fr;}
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<div id="loader">
+<div class="loader-logo">GLASPULS</div>
+<div class="loader-line">
+<div class="loader-fill"></div>
+</div>
+</div>
+
+<div id="progressBar"></div>
+
+<nav>
+<div class="wrap nav-inner">
+<div class="logo">GLASPULS</div>
+<div class="menu">
+<a href="#showcase">Showcase</a>
+<a href="#technik">Technik</a>
+<a href="#roi">ROI-Rechner</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+<a href="#kontakt" class="btn nav-cta-desktop">Beratung anfragen</a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Menü öffnen" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#showcase">Showcase</a>
+<a href="#technik">Technik</a>
+<a href="#roi">ROI-Rechner</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+<a href="#kontakt" class="btn">Beratung anfragen</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">TRANSPARENTE LED-TECHNOLOGIE FÜR ÖSTERREICH</div>
+<h1>Ihr Fenster <span>spricht.</span><br>Leise bei Tag. Laut bei Nacht.</h1>
+<p>Transparente LED-Folie verwandelt Ihre Glasfläche in eine digitale Werbefläche – ohne dass Kunden die Sicht in Ihr Geschäft verlieren.</p>
+<a href="#kontakt" class="btn">Kostenlose Beratung</a>
+<a href="#roi" class="roi-teaser">📊 Rechnen Sie Ihren Umsatz-Zuwachs aus →</a>
+<div class="stats">
+<div class="stat"><h2>95%</h2><span>Transparenz</span></div>
+<div class="stat"><h2>6000</h2><span>Nits Helligkeit</span></div>
+<div class="stat"><h2>24h</h2><span>Antwortzeit</span></div>
+</div>
+</div>
+<div class="hero-image">
+<img src="images/hero-transparente-led-folie.jpg" alt="Transparente LED Folie">
+<div class="glow"></div>
+</div>
+</div>
+</section>
+
+<section class="trust-bar">
+<div class="wrap trust-grid">
+<div class="trust-item"><span class="trust-icon">🛡️</span>2 Jahre Herstellergarantie</div>
+<div class="trust-item"><span class="trust-icon">🇪🇺</span>Qualität aus Europa</div>
+<div class="trust-item"><span class="trust-icon">🔧</span>Montage durch Fachpartner</div>
+<div class="trust-item"><span class="trust-icon">📄</span>Kostenlose, unverbindliche Beratung</div>
+</div>
+</section>
+
+<section id="showcase" class="showcase">
+<div class="wrap">
+<div class="section-title">
+<span>SHOWCASE</span>
+<h2>So sieht transparente LED-Technologie in der Realität aus.</h2>
+<p>Nahezu unsichtbar wenn ausgeschaltet. Beeindruckend sobald Inhalte abgespielt werden.</p>
+</div>
+<div class="gallery">
+<div class="card">
+<img src="images/galerie-led-glasfassade.jpg" alt="LED Glasfassade">
+<div class="overlay">
+<h3>Großflächige Glasfassaden</h3>
+<p>Ideal für Einkaufszentren, Bürogebäude und Eingangsbereiche.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/galerie-led-folie.jpg" alt="LED Folie">
+<div class="overlay">
+<h3>Flexible LED-Folie</h3>
+<p>Direkt auf Glas montiert. Keine massive LED-Wand nötig.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="technik" class="mockup-section">
+<div class="wrap">
+<div class="section-title">
+<span>LIVE-VORSCHAU</span>
+<h2>Ziehen Sie den Regler: AUS gegen AN</h2>
+<p>So verwandelt sich Ihr Schaufenster, sobald die transparente LED-Folie aktiv ist.</p>
+</div>
+<div class="mockup-frame">
+<div class="ba-slider" id="mockupSlider" style="height:100%;">
+<div class="ba-layer ba-day">
+<img class="ba-photo" src="images/schieber-aus.jpg" alt="Fenster ohne aktive LED-Folie">
+
+</div>
+<div class="ba-layer ba-night">
+<img class="ba-photo" src="images/schieber-an.jpg" alt="Fenster mit aktiver LED-Folie">
+
+</div>
+<div class="ba-tag day">AUS</div>
+<div class="ba-tag night">AN</div>
+<div class="ba-handle" id="mockupHandle">
+<div class="ba-handle-bar"></div>
+<div class="ba-handle-grip">↔</div>
+</div>
+</div>
+</div>
+<p class="mockup-hint">Tipp: Regler mit Maus oder Finger verschieben.</p>
+</div>
+</section>
+
+<section class="features">
+<div class="wrap">
+<div class="section-title">
+<span>VORTEILE</span>
+<h2>Warum GLASPULS?</h2>
+</div>
+<div class="feature-grid">
+<div class="feature"><div class="icon">⚡</div><h3>Hohe Helligkeit</h3><p>Bis zu 6.000 Nits. Auch bei direkter Sonneneinstrahlung hervorragend sichtbar.</p></div>
+<div class="feature"><div class="icon">👁️</div><h3>95 % Transparenz</h3><p>Das Schaufenster bleibt offen. Kunden sehen weiterhin in den Verkaufsraum.</p></div>
+<div class="feature"><div class="icon">📱</div><h3>Cloud-Steuerung</h3><p>Videos und Werbung bequem per Smartphone oder Computer wechseln.</p></div>
+<div class="feature"><div class="icon">🛠️</div><h3>Schnelle Montage</h3><p>In den meisten Fällen innerhalb eines Tages installiert.</p></div>
+<div class="feature"><div class="icon">🌙</div><h3>Automatische Helligkeit</h3><p>Sensoren passen die Leuchtkraft automatisch an.</p></div>
+<div class="feature"><div class="icon">🪶</div><h3>Extrem leicht</h3><p>Wird direkt auf vorhandenes Glas aufgebracht. Keine massive LED-Wand nötig.</p></div>
+<div class="feature"><div class="icon">🔋</div><h3>Energiesparend</h3><p>Bis zu 40 % weniger Verbrauch als klassische LED-Wände.</p></div>
+<div class="feature"><div class="icon">🚀</div><h3>Zukunftsweisende Technologie</h3><p>GLASPULS bringt transparente LED-Folien nach Österreich – modern, effizient und noch selten im Straßenbild zu finden.</p></div>
+<div class="feature"><div class="icon">🔄</div><h3>Flexible Werbung</h3><p>Ob Rabattaktion, Event oder saisonale Kampagne – Inhalte lassen sich jederzeit anpassen und in Sekunden wechseln.</p></div>
+</div>
+</div>
+</section>
+
+<section id="roi" class="roi-section roi-featured">
+<div class="wrap">
+<div class="section-title">
+<span class="roi-badge">🔥 BELIEBTESTES TOOL &nbsp;·&nbsp; ROI-RECHNER</span>
+<h2>Was bringt Ihnen die Investition?</h2>
+<p>Eine grobe Schätzung des zusätzlichen Jahresumsatzes durch mehr Aufmerksamkeit an Ihrer Glasfläche. In 10 Sekunden ausgerechnet.</p>
+</div>
+<div class="roi-box">
+<div class="roi-inputs">
+<label>Tägliche Passantenfrequenz: <span class="roi-value" id="trafficValue">500</span></label>
+<input type="range" id="traffic" min="50" max="5000" step="50" value="500" oninput="calculateROI()">
+
+<label>Durchschnittlicher Kundenwert: <span class="roi-value" id="valueValue">40 €</span></label>
+<input type="range" id="customerValue" min="5" max="500" step="5" value="40" oninput="calculateROI()">
+
+<label>Zusätzliche Käufer durch die Werbefläche: <span class="roi-value" id="convValue">0,5 %</span></label>
+<input type="range" id="conversion" min="0.1" max="3" step="0.1" value="0.5" oninput="calculateROI()">
+</div>
+<div class="roi-result">
+<span>Geschätzter zusätzlicher Jahresumsatz</span>
+<h2 id="roiResult">€36,500</h2>
+<p>Unverbindliche Schätzung auf Basis Ihrer Angaben (Richtwert: 0,1–3 % zusätzliche Käufer). Tatsächliche Ergebnisse hängen von Standort, Sichtbarkeit und Inhalt ab.</p>
+<a href="#kontakt" class="btn">Jetzt Beratung sichern</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="compare-section">
+<div class="wrap">
+<div class="section-title">
+<span>VERGLEICH</span>
+<h2>Warum transparente LED-Folie?</h2>
+</div>
+<table class="compare-table">
+<tr>
+<th>Eigenschaft</th>
+<th>Fensterfolie</th>
+<th>LED-Wand</th>
+<th class="col-highlight">Transparente LED-Folie</th>
+</tr>
+<tr>
+<td>Durchsicht möglich</td>
+<td>❌</td>
+<td>❌</td>
+<td class="col-highlight">✅</td>
+</tr>
+<tr>
+<td>Dynamische Inhalte</td>
+<td>❌</td>
+<td>✅</td>
+<td class="col-highlight">✅</td>
+</tr>
+<tr>
+<td>Einfache Montage</td>
+<td>✅</td>
+<td>❌</td>
+<td class="col-highlight">✅</td>
+</tr>
+<tr>
+<td>Hochwertige Optik</td>
+<td>⚠️</td>
+<td>⚠️</td>
+<td class="col-highlight">✅</td>
+</tr>
+</table>
+</div>
+</section>
+
+<section class="specs-section">
+<div class="wrap">
+<div class="section-title">
+<span>TECHNISCHE DATEN</span>
+<h2>Spezifikationen im Überblick</h2>
+</div>
+<table class="specs-table">
+<tr><td>Helligkeit</td><td>bis zu 6.000 Nits</td></tr>
+<tr><td>Transparenz</td><td>bis zu 95 %</td></tr>
+<tr><td>Pixel-Pitch Optionen</td><td>P3.9 / P5.9 / P7.8 mm</td></tr>
+<tr><td>Lebensdauer</td><td>ca. 100.000 Betriebsstunden</td></tr>
+<tr><td>Stromverbrauch</td><td>ca. 150–250 W/m²</td></tr>
+<tr><td>Wetterschutz</td><td>IP65 (Außenvariante)</td></tr>
+<tr><td>Garantie</td><td>2 Jahre auf Material & Verarbeitung</td></tr>
+</table>
+</div>
+</section>
+
+<section class="timeline">
+<div class="wrap">
+<div class="section-title">
+<span>ABLAUF</span>
+<h2>Von der Anfrage bis zur laufenden Werbung</h2>
+</div>
+<div class="process-flow">
+<div class="process-node">
+<div class="process-icon">📞</div>
+<div class="process-text"><h3>Anfrage</h3><p>Sie kontaktieren uns über das Formular, WhatsApp oder Telefon.</p></div>
+</div>
+<div class="process-connector"></div>
+<div class="process-node">
+<div class="process-icon">📍</div>
+<div class="process-text"><h3>Vor-Ort Besichtigung</h3><p>Wir vermessen Ihre Glasfläche und prüfen die technischen Gegebenheiten.</p></div>
+</div>
+<div class="process-connector"></div>
+<div class="process-node">
+<div class="process-icon">📐</div>
+<div class="process-text"><h3>Visualisierung</h3><p>Sie sehen eine Vorschau der LED-Folie direkt auf Ihrem Gebäude.</p></div>
+</div>
+<div class="process-connector"></div>
+<div class="process-node">
+<div class="process-icon">🛠</div>
+<div class="process-text"><h3>Installation</h3><p>Professionelle Montage, meist innerhalb von 1–2 Tagen.</p></div>
+</div>
+<div class="process-connector"></div>
+<div class="process-node">
+<div class="process-icon">📱</div>
+<div class="process-text"><h3>Inhalte selbst verwalten</h3><p>Sie steuern Ihre Werbung bequem per Smartphone oder PC.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="case-study">
+<div class="wrap">
+<div class="section-title">
+<span>REFERENZ</span>
+<h2>Eine echte Installation. Kein Stockfoto.</h2>
+<p>Ziehen Sie den Regler, um die Glasfläche bei Tag und bei Nacht zu sehen.</p>
+</div>
+<div class="case-card">
+<div class="case-visual">
+<div class="ba-slider" id="caseSlider">
+<div class="ba-layer ba-day">
+<img class="ba-photo" src="images/referenz-tag.jpg" alt="Referenzinstallation bei Tag">
+
+</div>
+<div class="ba-layer ba-night">
+<img class="ba-photo" src="images/referenz-nacht.jpg" alt="Referenzinstallation bei Nacht">
+
+</div>
+<div class="ba-tag day">TAG</div>
+<div class="ba-tag night">NACHT</div>
+<div class="ba-handle" id="caseHandle">
+<div class="ba-handle-bar"></div>
+<div class="ba-handle-grip">↔</div>
+</div>
+</div>
+</div>
+<div class="case-body">
+<div class="case-meta">
+<div class="case-logo">MRYME</div>
+<div class="case-meta-text">
+<h4>MRYME SRO</h4>
+<span>Bratislava</span>
+</div>
+</div>
+<div class="case-stats">
+<div class="case-stat"><h3>18 m²</h3><span>Installierte Fläche</span></div>
+<div class="case-stat"><h3>2 Tage</h3><span>Montagezeit</span></div>
+<div class="case-stat"><h3>95 %</h3><span>Transparenz erhalten</span></div>
+</div>
+<p class="case-quote">„Unsere Glasfront zieht jetzt auch abends Aufmerksamkeit auf sich, ohne dass der Showroom von außen verdeckt wird.“</p>
+<p class="case-author">— Geschäftsführerin, MRYME SRO</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="clients">
+<div class="wrap">
+<div class="section-title">
+<span>VERTRAUEN</span>
+<h2>Ideal für nahezu jede Branche</h2>
+<p>Transparente LED-Technologie eignet sich für Unternehmen jeder Größe.</p>
+</div>
+<div class="logo-grid">
+<div class="logo-card">AUTOHÄUSER</div>
+<div class="logo-card">SHOPPING CENTER</div>
+<div class="logo-card">HOTELS</div>
+<div class="logo-card">BANKEN</div>
+<div class="logo-card">RESTAURANTS</div>
+<div class="logo-card">IMMOBILIEN</div>
+<div class="logo-card">APOTHEKEN</div>
+<div class="logo-card">SHOWROOMS</div>
+</div>
+</div>
+</section>
+
+<section id="faq" class="faq">
+<div class="wrap">
+<div class="section-title">
+<span>FAQ</span>
+<h2>Häufige Fragen</h2>
+</div>
+<div class="faq-item">
+<button class="faq-question">Kann man noch durch das Fenster sehen?</button>
+<div class="faq-answer">Ja. Je nach Modell bleiben bis zu 95 % Transparenz erhalten.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Wie lange dauert die Montage?</button>
+<div class="faq-answer">Meist 1–2 Tage.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Kann ich Inhalte selbst ändern?</button>
+<div class="faq-answer">Ja. Per Cloud, Smartphone oder PC.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Ist die Folie wetterfest?</button>
+<div class="faq-answer">Ja. Es gibt Innen- und Außenvarianten.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Funktioniert die Folie auch bei direkter Sonneneinstrahlung?</button>
+<div class="faq-answer">Ja. Mit bis zu 6.000 Nits Helligkeit bleibt der Inhalt auch bei direktem Sonnenlicht gut sichtbar.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Was passiert, wenn ein Modul ausfällt?</button>
+<div class="faq-answer">Die Folie ist modular aufgebaut. Ein defektes Segment kann einzeln getauscht werden, ohne die gesamte Fläche zu demontieren.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Wie viel Strom verbraucht die Installation?</button>
+<div class="faq-answer">Je nach Helligkeit und Fläche etwa 150–250 W pro m². Automatische Helligkeitssensoren senken den Verbrauch bei Tageslicht zusätzlich.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Benötige ich eine Baugenehmigung?</button>
+<div class="faq-answer">Das hängt von Größe, Standort und lokalen Vorschriften ab. Wir prüfen dies im Rahmen der kostenlosen Vor-Ort-Beratung gemeinsam mit Ihnen.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Kann meine vorhandene Glasscheibe genutzt werden?</button>
+<div class="faq-answer">In den meisten Fällen ja. Die Folie wird direkt auf die bestehende Scheibe aufgebracht, ein Austausch des Glases ist normalerweise nicht nötig.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Wie werden die Inhalte aktualisiert?</button>
+<div class="faq-answer">Über unsere Cloud-Plattform. Sie laden Bilder oder Videos hoch und veröffentlichen sie direkt per Smartphone, Tablet oder PC.</div>
+</div>
+</div>
+</section>
+
+<section class="cta-banner">
+<div class="wrap">
+<h2>Machen Sie Ihre Glasfläche zum Blickfang.</h2>
+<p>Kostenlose Beratung direkt vor Ort.</p>
+<a href="#kontakt" class="btn">Jetzt Beratung sichern</a>
+</div>
+</section>
+
+<section id="kontakt" class="contact">
+<div class="wrap">
+<div class="section-title">
+<span>KONTAKT</span>
+<h2>Beratung anfragen</h2>
+<p>Wir melden uns innerhalb von 24 Stunden.</p>
+</div>
+<form class="contact-form" action="https://formsubmit.co/dami@mirax.at" method="POST">
+<input type="hidden" name="_subject" value="Neue Anfrage GLASPULS">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="Name" placeholder="Name" required>
+<input type="email" name="Email" placeholder="E-Mail" required>
+<input type="tel" name="Telefon" placeholder="Telefon">
+<textarea name="Nachricht" rows="7" placeholder="Beschreiben Sie Ihr Projekt..."></textarea>
+<label class="consent">
+<input type="checkbox" name="Datenschutz_akzeptiert" required>
+<span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.</span>
+</label>
+<button class="btn">Beratung anfragen</button>
+</form>
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/4367764864005" target="_blank">💬</a>
+<a class="float-cta" id="floatCta" href="#kontakt">📅 <span>Kostenlose Beratung</span></a>
+
+<img class="parallax" src="images/parallax-links.jpg" style="top:20%;left:5%;">
+<img class="parallax" src="images/parallax-rechts.jpg" style="bottom:15%;right:5%;">
+
+<footer>
+<div class="wrap footer-grid">
+<div>
+<h3>GLASPULS</h3>
+<p>Transparente LED-Werbung für Österreich.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<a href="#showcase">Showcase</a>
+<a href="#technik">Technik</a>
+<a href="#roi">ROI-Rechner</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+<div>
+<h4>Kontakt</h4>
+<p>Daniel Mikuljevic</p>
+<p>Salbeistraße 3</p>
+<p>4484 Kronstorf, Österreich</p>
+<p>dami@mirax.at</p>
+<p>+43 677 64864005</p>
+</div>
+</div>
+<div class="copyright">© 2026 GLASPULS · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+
+// FAQ
+document.querySelectorAll(".faq-question").forEach(btn=>{
+  btn.setAttribute("aria-expanded","false");
+  btn.onclick=()=>{
+    const answer=btn.nextElementSibling;
+    const isOpen=answer.style.display==="block";
+    answer.style.display = isOpen ? "none" : "block";
+    btn.setAttribute("aria-expanded", isOpen ? "false" : "true");
+  };
+});
+
+// Hamburger / Mobile Menu
+const hamburgerBtn=document.getElementById("hamburgerBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+hamburgerBtn.addEventListener("click",()=>{
+  const isOpen=mobileMenu.classList.toggle("open");
+  hamburgerBtn.classList.toggle("open");
+  hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+mobileMenu.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    mobileMenu.classList.remove("open");
+    hamburgerBtn.classList.remove("open");
+    hamburgerBtn.setAttribute("aria-expanded","false");
+  });
+});
+
+// Scroll Animation
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity=1;
+      entry.target.style.transform="translateY(0)";
+    }
+  });
+});
+document.querySelectorAll("section").forEach(sec=>{
+  sec.style.opacity=0;
+  sec.style.transform="translateY(70px)";
+  sec.style.transition="1s";
+  observer.observe(sec);
+});
+
+/* Loader */
+window.onload=()=>{
+  setTimeout(()=>{
+    loader.style.opacity=0;
+    setTimeout(()=>{ loader.remove(); },1000);
+  },1800);
+};
+
+/* Progress */
+window.addEventListener("scroll",()=>{
+  const h=document.documentElement;
+  const scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight);
+  progressBar.style.width=scrolled*100+"%";
+});
+
+/* Partikel-Hintergrund */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+const isMobile=window.innerWidth<768;
+const prefersReducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function resizeCanvas(){
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize",resizeCanvas);
+
+const particleCount = prefersReducedMotion ? 0 : (isMobile ? 30 : 90);
+const particles=[];
+for(let i=0;i<particleCount;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*2+1,
+    dx:(Math.random()-.5)*0.35,
+    dy:(Math.random()-.5)*0.35
+  });
+}
+
+function animateParticles(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    p.x+=p.dx;
+    p.y+=p.dy;
+    if(p.x<0||p.x>canvas.width)p.dx*=-1;
+    if(p.y<0||p.y>canvas.height)p.dy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle="#4fd8ff";
+    ctx.fill();
+  });
+  if(particleCount>0) requestAnimationFrame(animateParticles);
+}
+if(particleCount>0) animateParticles();
+
+/* Mouse Parallax */
+document.addEventListener("mousemove",(e)=>{
+  document.querySelectorAll(".parallax").forEach(img=>{
+    let x=(e.clientX-window.innerWidth/2)/80;
+    let y=(e.clientY-window.innerHeight/2)/80;
+    img.style.transform=`translate(${x}px,${y}px)`;
+  });
+});
+
+/* Before/After (Tag/Nacht, Aus/An) Slider */
+function initBaSlider(sliderId, handleId){
+  const slider=document.getElementById(sliderId);
+  const handle=document.getElementById(handleId);
+  const night=slider.querySelector(".ba-night");
+  if(!slider||!handle||!night) return;
+
+  let dragging=false;
+
+  function setPosition(clientX){
+    const rect=slider.getBoundingClientRect();
+    let pct=((clientX-rect.left)/rect.width)*100;
+    pct=Math.max(0,Math.min(100,pct));
+    night.style.clipPath=`inset(0 0 0 ${pct}%)`;
+    handle.style.left=pct+"%";
+  }
+
+  handle.addEventListener("mousedown",()=>{ dragging=true; });
+  window.addEventListener("mouseup",()=>{ dragging=false; });
+  window.addEventListener("mousemove",(e)=>{
+    if(dragging) setPosition(e.clientX);
+  });
+
+  handle.addEventListener("touchstart",()=>{ dragging=true; },{passive:true});
+  window.addEventListener("touchend",()=>{ dragging=false; });
+  window.addEventListener("touchmove",(e)=>{
+    if(dragging && e.touches[0]) setPosition(e.touches[0].clientX);
+  },{passive:true});
+
+  slider.addEventListener("click",(e)=>{
+    if(e.target===handle||handle.contains(e.target)) return;
+    setPosition(e.clientX);
+  });
+}
+initBaSlider("caseSlider","caseHandle");
+initBaSlider("mockupSlider","mockupHandle");
+
+/* ROI Rechner */
+function calculateROI(){
+  const traffic=+document.getElementById("traffic").value;
+  const customerValue=+document.getElementById("customerValue").value;
+  const conversion=+document.getElementById("conversion").value;
+
+  document.getElementById("trafficValue").innerHTML=traffic.toLocaleString("de-DE");
+  document.getElementById("valueValue").innerHTML=customerValue.toLocaleString("de-DE")+" €";
+  document.getElementById("convValue").innerHTML=conversion.toLocaleString("de-DE")+" %";
+
+  const dailyRevenue=traffic*(conversion/100)*customerValue;
+  const annualRevenue=dailyRevenue*365;
+
+  document.getElementById("roiResult").innerHTML="€"+Math.round(annualRevenue).toLocaleString("de-DE");
+}
+calculateROI();
+
+/* Floating CTA nach Scroll einblenden */
+const floatCta=document.getElementById("floatCta");
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>window.innerHeight*0.8){
+    floatCta.classList.add("show");
+  }else{
+    floatCta.classList.remove("show");
+  }
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
